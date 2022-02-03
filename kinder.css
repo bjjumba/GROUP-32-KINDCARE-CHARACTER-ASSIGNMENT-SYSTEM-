@@ -1,0 +1,44 @@
+.tr-login {
+    background-color: #87cefa;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.main-login {
+    overflow:hidden;
+    
+}
+#tr {
+    text-align: top;
+}
+li{
+    list-style-type: none;
+    display: block;
+    padding-left: 20px;
+}
+
+.list {
+    list-style-type: none;
+    display:flex;
+    background-color: #87cefa;
+    align-items: flex-start;
+    height: 20px;
+    justify-content: center;
+    margin-bottom: 5px;
+}
+li a {
+    text-decoration: none;
+    padding-bottom: 50px;
+    padding-top: 100px;
+    
+}
+li {
+    display: inline;
+}
+
+nav {
+    padding: 20px;
+}
