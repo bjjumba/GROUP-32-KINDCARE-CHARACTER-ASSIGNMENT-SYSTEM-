@@ -1,10 +1,9 @@
-
 -- phpMyAdmin SQL Dump
 -- version 5.1.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Jan 27, 2022 at 10:55 AM
+-- Generation Time: Jan 31, 2022 at 10:34 AM
 -- Server version: 5.7.36
 -- PHP Version: 7.4.26
 
@@ -35,7 +34,14 @@ CREATE TABLE IF NOT EXISTS `assignment` (
   `AssgnID` varchar(20) NOT NULL,
   `startTime` time NOT NULL,
   `endTime` time NOT NULL,
-  `No_of_chars` int(11) NOT NULL,
+  `char1` varchar(1) NOT NULL,
+  `char2` varchar(1) DEFAULT NULL,
+  `char3` varchar(1) DEFAULT NULL,
+  `char4` varchar(1) DEFAULT NULL,
+  `char5` varchar(1) DEFAULT NULL,
+  `char6` varchar(1) DEFAULT NULL,
+  `char7` varchar(1) DEFAULT NULL,
+  `char8` varchar(1) DEFAULT NULL,
   `Passcode` varchar(20) DEFAULT NULL,
   PRIMARY KEY (`AssgnID`),
   KEY `Passcode` (`Passcode`)
@@ -53,6 +59,7 @@ CREATE TABLE IF NOT EXISTS `pupil` (
   `firstname` varchar(20) NOT NULL,
   `lastname` varchar(20) NOT NULL,
   `phonenumber` varchar(20) NOT NULL,
+  `status` varchar(20) NOT NULL DEFAULT 'Active',
   `Passcode` varchar(20) DEFAULT NULL,
   PRIMARY KEY (`Usercode`),
   KEY `Passcode` (`Passcode`)
