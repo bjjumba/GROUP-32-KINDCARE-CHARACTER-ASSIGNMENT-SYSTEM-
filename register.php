@@ -25,11 +25,6 @@ $result = mysqli_query($conn, $query);
             display: flex;
             width:100%;
         }
-        .register{
-            padding:30px;
-            border: 1px solid lightskyblue;
-            width: 40%;
-        }
         th {
             text-align: center;
             padding-left: 10px;
@@ -41,13 +36,21 @@ $result = mysqli_query($conn, $query);
             <h3>Registration</h3>
             <form action="includes/register.inc.php" method="POST">
                 FirstName:<br>
+                <div class="inputfeild">
                 <input type="text" name="fName"><br>
+                </div>
                 LastName:<br>
+                <div class="inputfeild">
                 <input type="text" name="lName"><br>
+                </div>
                 Phone Number:<br>
+                <div class="inputfeild">
                 <input type="text" name="phone"><br>
+                </div>
                 Assign usercode:<br>
+                <div class="inputfeild">
                 <input type="password" name="code"><br><br>
+                </div>
                 <button type="submit" name="reg">Register</button>
             </form>
         </div>
@@ -65,11 +68,11 @@ $result = mysqli_query($conn, $query);
                 <?php endwhile;?>
             </table>
         </div>
-        <div>
-            <h4>Activation Requests</h4>
-            <?php
-            ?>
-        </div>
+    </div>
+    <div class="activation">
+        <h4>Activation Requests</h4>
+        <?php
+        ?>
     </div>
     
 </main>

@@ -11,24 +11,24 @@ session_start();
     <link rel="stylesheet" href="kinder.css">
 </head>
 <header>
-    <nav class="list">
-        <ul>
-            <li>
-                <a href="register.php">REGISTER PUPIL</a>
-            </li>
-            <li>
-                <a href="assignment.php">ASSIGNMENTS</a>
-            </li>
-            <li>
-                <a href="reports.php">REPORTS & RESULTS</a>
-            </li>
-            <li style="float:right">
-            <form action="includes/logout.inc.php" method="post">
-            <input type="submit" name="logout" value="LOGOUT">
-            </form>
-        
-            </li>
-        </ul>
+    <img class="logo" src="logo.png" alt="logo">
+    <nav>
+        <h4>
+            <a href="register.php">Register Pupil</a>
+        </h4>
+        <h4>
+            <a href="assignment.php">Assignments</a>
+        </h4>
+        <h4>
+            <a href="reports.php">Reports & Results</a>
+        </h4>
+       <!-- <div class="animation start-register"></div> -->
     </nav>
+    <form action="includes/logout.inc.php" method="post">
+    <div class="f_bttn">
+    <input type="submit" name="logout" value="LOGOUT">
+    </div>
+    </form>
+
 </header>
 </html>
