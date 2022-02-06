@@ -39,7 +39,7 @@ $result = mysqli_query($conn, $query);
                 echo'<input name="username" hidden value='.$_SESSION['userUid'].'>';
                 ?>
                 </br>
-                <button type="submit" name="reg">Register</button>
+                <button type="submit" name="reg" class="button">Register</button>
             </form>
         </div>
         <div class="register">
@@ -66,10 +66,10 @@ $result = mysqli_query($conn, $query);
                                 echo'<input type="hidden" name="status" value="'.$row['activeInactive'].'">';
                             
                         if($row['activeInactive']=="Active") {
-                            echo '<button name="statusChange">Deactivate</button>';
+                            echo '<button name="statusChange" class="d_activate">Deactivate</button>';
                         }
                         else if($row['activeInactive']=="Inactive") {
-                            echo '<button name="statusChange">Activate</button>';
+                            echo '<button name="statusChange" class="activate">Activate</button>';
                         }
                         ?>   
                 

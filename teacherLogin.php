@@ -23,7 +23,7 @@ session_start();
             <div class="inputfeild">
             <input type="password" name="pcd" placeholder="Passcode"><br><br>
             </div>
-            <button type="submit" name="login">Login</button><br><br>
+            <button type="submit" name="login" class="button">Login</button><br><br>
             <!-- Don't have an account!<a href="signup.php">Signup</a> -->
         </form>
     </div>

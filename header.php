@@ -11,7 +11,7 @@ session_start();
     <link rel="stylesheet" href="kinder.css">
 </head>
 <header>
-    <img class="logo" src="logo.png" alt="logo">
+    <a href="welDash.php"><img class="logo" src="img/kindercare_logo.jpg" alt="logo"></a>
     <nav>
         <h4>
             <a href="welDash.php">DashBoard</a>
