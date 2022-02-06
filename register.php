@@ -9,7 +9,7 @@ $password = "";
 $dbname = "kinderCare_sys";
 
 $conn = mysqli_connect($hostname, $username, $password, $dbname);
-$query = "SELECT Usercode, firstname, lastname FROM pupil";
+$query = "SELECT Usercode, firstname, lastname,phonenumber,activeInactive FROM pupil";
 $result = mysqli_query($conn, $query);
 
 ?>
@@ -35,6 +35,10 @@ $result = mysqli_query($conn, $query);
                 <div class="inputfeild">
                 <input type="password" name="code"><br><br>
                 </div>
+                <?php
+                echo'<input name="username" hidden value='.$_SESSION['userUid'].'>';
+                ?>
+                </br>
                 <button type="submit" name="reg">Register</button>
             </form>
         </div>
@@ -62,10 +66,10 @@ $result = mysqli_query($conn, $query);
                                 echo'<input type="hidden" name="status" value="'.$row['activeInactive'].'">';
                             
                         if($row['activeInactive']=="Active") {
-                            echo '<button name="statusChange">DEACTIVATE</button>';
+                            echo '<button name="statusChange">Deactivate</button>';
                         }
                         else if($row['activeInactive']=="Inactive") {
-                            echo '<button name="statusChange">ACTIVATE</button>';
+                            echo '<button name="statusChange">Activate</button>';
                         }
                         ?>   
                 
