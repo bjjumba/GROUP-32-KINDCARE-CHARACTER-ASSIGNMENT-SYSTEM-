@@ -244,6 +244,10 @@ select{
 select:hover{
     border-color: #0d2a55;
 }
+option{
+    border-radius: 5px;
+    transition: all 0.3s ease 0s;
+}
 button{
     margin-top: 10px;
     width: 100%;

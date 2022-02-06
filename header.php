@@ -14,6 +14,9 @@ session_start();
     <img class="logo" src="logo.png" alt="logo">
     <nav>
         <h4>
+            <a href="welDash.php">DashBoard</a>
+        </h4>
+        <h4>
             <a href="register.php">Register Pupil</a>
         </h4>
         <h4>
