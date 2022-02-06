@@ -55,17 +55,40 @@ $result = mysqli_query($conn, $query);
             </form>
         </div>
         <div class="register">
-            <table>
+        <table>
+                <form action="includes/status.inc.php" method="POST">
                 <tr style="text-display:bold";>
-                    <th>Name of Registered Student</th>
-                    <th> Status </th>
+                    <th>Usercode</th>
+                    <th>Name</th>
+                    <th>Status</th>
+                    <th>phonenumber</th>
+                    <th>Change Status</th>
                 </tr>
                 <?php while($row = mysqli_fetch_array($result)):;?>
+                
                 <tr>
+                    <td><?php echo $row["Usercode"];?></td>
                     <td><?php echo $row["lastname"]," ",$row["firstname"];?></td>
-                    <td><button type="submit">ACTIVATE</button> or <button type="submit">DEACTIVATE</button></td>
+                    <td><?php echo $row["activeInactive"];?></td>
+                    <td><?php echo $row["phonenumber"];?></td>
+                    <td>    
+                        <?php
+                                
+                                echo'<input type= "hidden" name="code" value="'.$row['Usercode'].'">';
+                                echo'<input type="hidden" name="status" value="'.$row['activeInactive'].'">';
+                            
+                        if($row['activeInactive']=="Active") {
+                            echo '<button name="statusChange">DEACTIVATE</button>';
+                        }
+                        else if($row['activeInactive']=="Inactive") {
+                            echo '<button name="statusChange">ACTIVATE</button>';
+                        }
+                        ?>   
+                
+                    </td>
                 </tr>
                 <?php endwhile;?>
+                </form>
             </table>
         </div>
     </div>
@@ -74,7 +97,18 @@ $result = mysqli_query($conn, $query);
         <?php
         ?>
     </div>
+    <script>
     
+        window.addEventListener("click",change,false)
+        function change() {
+             document.getElementById('btn').style.backgroundColor='red';
+           // button = 'Red';
+        }
+        window.addEventListener("click",start,false)
+        function start() {
+             document.getElementById('btn2').style.backgroundColor = 'green';    
+        }
+    </script>
 </main>
 
 <?php
