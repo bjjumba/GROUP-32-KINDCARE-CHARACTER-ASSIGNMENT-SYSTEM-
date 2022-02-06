@@ -273,6 +273,9 @@ button:hover{
     width: 100%;
     border-radius: 5px;
     padding: 25px;
+    border: 1px solid lightskyblue;
+    text-align: left;
+    padding-right: 16px;
 }
 .container .inputfeild{
     display: flex;
@@ -280,6 +283,14 @@ button:hover{
     width: 100%;
     margin: 0px 0;
     transition: all 0.3s ease 0s;
+}
+#reg {
+    display: flex;
+    width:100%;
+}
+th {
+    text-align: center;
+    padding-left: 10px;
 }
 table{
     width: 80%;
@@ -302,9 +313,9 @@ table tr td ,th{
 .register{
     padding:30px;
     border: 1px solid lightskyblue;
-    width: 40%;
+    width: 65%;
     margin-top: 20px;
-    overflow: scroll;
+    overflow-y: scroll;
     border-radius: 5px;
 }
 .s_bttn input{

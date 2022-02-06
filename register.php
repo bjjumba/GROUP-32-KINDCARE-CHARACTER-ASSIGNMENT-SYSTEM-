@@ -14,23 +14,7 @@ $result = mysqli_query($conn, $query);
 
 ?>
 
-<main>
-    <style>
-        .container {
-            border: 1px solid lightskyblue;
-            text-align: left;
-            padding-right: 16px;
-        }
-        #reg {
-            display: flex;
-            width:100%;
-        }
-        th {
-            text-align: center;
-            padding-left: 10px;
-        }    
-    </style>
-    
+<main>    
         <div id="reg">
         <div class="container">
             <h3>Registration</h3>
