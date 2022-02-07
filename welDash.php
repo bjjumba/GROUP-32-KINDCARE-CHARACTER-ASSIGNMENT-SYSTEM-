@@ -23,7 +23,7 @@ require 'header.php';
         echo'<h2> WELCOME '.$_SESSION['userUid'].'</h2>';
     }
     ?>
-    <div>
+    <div class="summ">
         <?php
         require 'includes/kinderCare_db.php';
 
@@ -33,35 +33,35 @@ require 'header.php';
         $open = "SELECT * FROM assignment";
         $closed = "SELECT * FROM mark";
         $request = "SELECT * FROM request";
-        echo'<div>';
+        echo'<div class="summary">';
         if($result=mysqli_query($conn, $pupils)){
             $rowcount = mysqli_num_rows($result);
-            printf("REGISTERED STUDENTS");
-            printf(" %d", $rowcount);
+            printf("<h3>REGISTERED STUDENTS</h3></br>");
+            printf(" <div class=No>%d</div>", $rowcount);
             mysqli_free_result($result);
         }
         echo'</div>';
-        echo'<div>';
+        echo'<div class="summary">';
         if($assign=mysqli_query($conn,$open)) {
             $rowcount= mysqli_num_rows($assign);
-            printf("OPEN ASSIGNMENTS");
-            printf(" %d", $rowcount);
+            printf("<h3>OPEN ASSIGNMENTS</h3></br>");
+            printf(" <div class=No>%d</div>", $rowcount);
             mysqli_free_result($assign);
         }
         echo'</div>';
-        echo'<div>';
+        echo'<div class="summary">';
         if($done=mysqli_query($conn,$closed)) {
             $rowcount = mysqli_num_rows($done);
-            printf("CLOSED ASSIGNMENTS");
-            printf(" %d", $rowcount);
+            printf("<h3>CLOSED ASSIGNMENTS</h3></br>");
+            printf(" <div class=No>%d</div>", $rowcount);
             mysqli_free_result($done);
         }
         echo'</div>';
-        echo'<div>';
+        echo'<div class="summary">';
         if($act=mysqli_query($conn,$request)) {
             $rowcount = mysqli_num_rows($act);
-            printf("NUMBER OF ACTIVATION REQUESTS");
-            printf(" %d", $rowcount);
+            printf("<h3>NUMBER OF ACTIVATION REQUESTS</h3></br>");
+            printf(" <div class=No>%d</div>", $rowcount);
             mysqli_free_result($act);
         }
         echo'</div>';
