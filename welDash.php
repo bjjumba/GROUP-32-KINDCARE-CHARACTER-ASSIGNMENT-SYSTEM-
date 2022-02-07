@@ -20,7 +20,7 @@ require 'header.php';
 <body>
     <?php
     if(isset($_SESSION['userUid'])) {
-        echo'<h2> WELCOME '.$_SESSION['userUid'].'</h2>';
+        echo'<h2> Welcome '.$_SESSION['userUid'].'</h2>';
     }
     ?>
     <div class="summ">
