@@ -90,6 +90,11 @@ footer{
 .inputfeild input:hover{
     border-color: #0d2a55;
 }
+.inputfeild input:focus{
+    outline: none !important;
+    border-color: #719ECE;
+    box-shadow: 0 0 10px #719ECE;
+}
 .inputfeild_button{
     width: 200px;
     height: 100%;
@@ -410,4 +415,22 @@ table tr td ,th{
     justify-content: center;
     align-items: center;
     justify-content: center;
+}
+.container1{
+    margin: 20px;
+    max-width: 350px;
+    width: 100%;
+    border-radius: 5px;
+    padding: 25px;
+    border: 1px solid lightskyblue;
+    text-align: left;
+    padding-right: 16px;
+    display: flex;
+}
+.container1 .inputfeild{
+    display: flex;
+    height: 45px;
+    width: 100%;
+    margin: 0px 0;
+    transition: all 0.3s ease 0s;
 }

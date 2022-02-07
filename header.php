@@ -7,11 +7,11 @@ session_start();
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>kindercare_header</title>
+    <title>Kindercare</title>
     <link rel="stylesheet" href="kinder.css">
 </head>
 <header>
-    <a href="welDash.php"><img class="logo" src="img/kindercare_logo.jpg" alt="logo"></a>
+    <a href="welDash.php"><img class="logo" src="img/logo.png" alt="logo"></a>
     <nav>
         <h4>
             <a href="welDash.php">DashBoard</a>
@@ -23,7 +23,7 @@ session_start();
             <a href="assignment.php">Assignments</a>
         </h4>
         <h4>
-            <a href="reports.php">Reports & Results</a>
+            <a href="form.php">Reports & Results</a>
         </h4>
        <!-- <div class="animation start-register"></div> -->
     </nav>
