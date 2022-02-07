@@ -5,7 +5,10 @@ require "header.php";
 ?>
 <style>
     body{
-        height: 130vh;
+        width: 100%;
+        height: 100%;
+        justify-content: center;
+        align-items: center;
     }
 </style>
 <main>
@@ -15,6 +18,8 @@ require "header.php";
         <div class="inputfeild">
         <input type="text" name="id" placeholder="Enter AssignmentID number">
     </div><br><br>
+    <div class="b_wrapper">
+    <div class="s_wrapper">
         <div class="chars">
         <div class= "schars">
         <label for="">CHARACTER 1:</label>
@@ -267,7 +272,9 @@ require "header.php";
         </select>
 </div>
 </div>
+</div>
         <br><br>
+        <div class="s_wrapper">
         <div class="wrp"> 
         <div class="wr">
         <label for="">Start Date </label>
@@ -288,6 +295,8 @@ require "header.php";
         <label for="">End Time</label>
         <div class="s_inputfeild">
         <input type="time" name="endtime"><br>
+        </div>
+        </div>
         </div>
         </div>
         </div>
