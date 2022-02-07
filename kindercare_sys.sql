@@ -72,6 +72,7 @@ CREATE TABLE IF NOT EXISTS `mark` (
   `comment` varchar(50) DEFAULT NULL,
   `average` float DEFAULT NULL,
   PRIMARY KEY (`Usercode`,`teacherUsername`,`assignmentID`),
+  KEY `Usercode` (`Usercode`),
   KEY `teacherUsername` (`teacherUsername`),
   KEY `assignmentID` (`assignmentID`)
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
@@ -140,24 +141,6 @@ CREATE TABLE IF NOT EXISTS `request` (
   PRIMARY KEY (`requestID`),
   KEY `Usercode` (`Usercode`),
   KEY `teacherUsername` (`teacherUsername`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
-
--- --------------------------------------------------------
-
---
--- Table structure for table `scorerecords`
---
-
-DROP TABLE IF EXISTS `scorerecords`;
-CREATE TABLE IF NOT EXISTS `scorerecords` (
-  `ScoreCode` varchar(20) NOT NULL,
-  `marks` int(11) NOT NULL,
-  `comment` varchar(200) NOT NULL,
-  `Passcode` varchar(20) DEFAULT NULL,
-  `AssgnID` varchar(20) DEFAULT NULL,
-  PRIMARY KEY (`ScoreCode`),
-  KEY `Passcode` (`Passcode`),
-  KEY `AssgnID` (`AssgnID`)
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
