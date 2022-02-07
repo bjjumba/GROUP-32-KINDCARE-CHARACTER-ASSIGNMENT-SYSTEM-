@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Feb 06, 2022 at 05:21 AM
+-- Generation Time: Feb 07, 2022 at 11:33 AM
 -- Server version: 5.7.36
 -- PHP Version: 7.4.26
 
@@ -69,12 +69,19 @@ CREATE TABLE IF NOT EXISTS `mark` (
   `teacherUsername` varchar(10) NOT NULL,
   `assignmentID` int(11) NOT NULL,
   `score` int(11) DEFAULT NULL,
-  `comment` varchar(50) NOT NULL,
+  `comment` varchar(50) DEFAULT NULL,
   `average` float DEFAULT NULL,
   PRIMARY KEY (`Usercode`,`teacherUsername`,`assignmentID`),
   KEY `teacherUsername` (`teacherUsername`),
   KEY `assignmentID` (`assignmentID`)
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `mark`
+--
+
+INSERT INTO `mark` (`Usercode`, `teacherUsername`, `assignmentID`, `score`, `comment`, `average`) VALUES
+(20, 'DeGuzman', 24, 45, 'Work harder54', 45);
 
 -- --------------------------------------------------------
 
@@ -99,7 +106,10 @@ CREATE TABLE IF NOT EXISTS `pupil` (
 --
 
 INSERT INTO `pupil` (`Usercode`, `firstname`, `lastname`, `phonenumber`, `activeInactive`, `teacherUsername`) VALUES
-(20, 'BENJAMIN', 'JJUMBA', '0721855895', 'Active', 'Benja');
+(20, 'BENJAMIN', 'JJUMBA', '0721855895', 'Inactive', 'Benja'),
+(1234, 'De Miss', 'Christine', '0700000000', 'Active', 'DeGuzman'),
+(21, 'Ramond ', 'Mist', '0701234567', 'Active', 'DeGuzman'),
+(11, 'De', 'Christine', '0700000000', 'Active', 'DeGuzman');
 
 -- --------------------------------------------------------
 
