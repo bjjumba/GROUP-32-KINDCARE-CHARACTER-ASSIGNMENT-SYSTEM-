@@ -8,7 +8,7 @@ if(isset($_POST['delete-request'])) {
     $query = "DELETE FROM request WHERE Usercode LIKE ?;";
     $stmt = mysqli_stmt_init($conn);
     if(!mysqli_stmt_prepare($stmt,$query)) {
-        header("Location: ../register.php?error=failedto Connect");
+        header("Location: ../register.php?error=failedtoConnect");
         exit();
     }else {
         mysqli_stmt_bind_param($stmt, "s", $usercode);
