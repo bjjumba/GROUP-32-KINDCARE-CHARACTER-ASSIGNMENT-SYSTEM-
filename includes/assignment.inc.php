@@ -2,8 +2,12 @@
 
 if(isset($_POST['assign-submit'])) {
     //assign variables
-    $one = $_POST['one'];
-     //isset function to remove undefined Index Errors
+     //isset function to remove undefined Index Errors 
+     if(isset($_POST['one'])) {
+        $one = $_POST['one'];
+    } else {
+        $one = NULL;
+    }
      if(isset($_POST['two'])) {
         $two = $_POST['two'];
     } else {
