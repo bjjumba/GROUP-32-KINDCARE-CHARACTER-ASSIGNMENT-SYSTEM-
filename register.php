@@ -44,7 +44,7 @@ $result = mysqli_query($conn, $query);
         </div>
         <div class="register">
         <table>
-                <form action="includes/status.inc.php" method="POST">
+                
                 <tr style="text-display:bold";>
                     <th>Usercode</th>
                     <th>Name</th>
@@ -59,7 +59,8 @@ $result = mysqli_query($conn, $query);
                     <td><?php echo $row["lastname"]," ",$row["firstname"];?></td>
                     <td><?php echo $row["activeInactive"];?></td>
                     <td><?php echo $row["phonenumber"];?></td>
-                    <td>    
+                    <td>  
+                    <form action="includes/status.inc.php" method="POST">  
                         <?php
                                 
                                 echo'<input type= "hidden" name="code" value="'.$row['Usercode'].'">';
@@ -72,30 +73,47 @@ $result = mysqli_query($conn, $query);
                             echo '<button name="statusChange" class="activate">Activate</button>';
                         }
                         ?>   
-                
+                         </form>
                     </td>
+                   
                 </tr>
                 <?php endwhile;?>
-                </form>
+                
             </table>
         </div>
     </div>
-    <div class="activation">
+    <div>
         <h4>Activation Requests</h4>
-        <?php
-        ?>
+        
+        <form action="includes/deleteRequest.inc.php" method="POST">
+        <table>
+        <tr>
+        <th>Request</th>
+        <th>Remove </th>
+        </tr>
+        <?php while($row=mysqli_fetch_array($rq_query)):; ?>
+                <tr>
+                <td><?php echo $row['Usercode']," ",$row['request'];?></td>
+                <td><?php
+                echo'<input type="hidden" name="usercode" value="'.$row['Usercode'].'">';
+                echo'<button name="delete-request">Delete</button>';
+                ?></td>
+                </tr>
+                <?php endwhile; ?>
+        </table>
+        </form>
     </div>
     <script>
     
-        window.addEventListener("click",change,false)
-        function change() {
-             document.getElementById('btn').style.backgroundColor='red';
-           // button = 'Red';
-        }
-        window.addEventListener("click",start,false)
-        function start() {
-             document.getElementById('btn2').style.backgroundColor = 'green';    
-        }
+        // window.addEventListener("click",change,false)
+        // function change() {
+        //      document.getElementById('btn').style.backgroundColor='red';
+        //    // button = 'Red';
+        // }
+        // window.addEventListener("click",start,false)
+        // function start() {
+        //      document.getElementById('btn2').style.backgroundColor = 'green';    
+        // }
     </script>
 </main>
 

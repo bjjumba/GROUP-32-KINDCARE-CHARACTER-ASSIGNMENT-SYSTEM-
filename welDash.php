@@ -43,7 +43,8 @@ require 'header.php';
         echo'</div>';
         echo'<div class="summary">';
         if($assign=mysqli_query($conn,$open)) {
-            $rowcount= mysqli_num_rows($assign);
+            $done=mysqli_query($conn,$closed);
+            $rowcount= mysqli_num_rows($assign)-mysqli_num_rows($done);
             printf("<h3>OPEN ASSIGNMENTS</h3></br>");
             printf(" <div class=No>%d</div>", $rowcount);
             mysqli_free_result($assign);
