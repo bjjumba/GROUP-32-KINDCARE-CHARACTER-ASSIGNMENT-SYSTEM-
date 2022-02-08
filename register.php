@@ -10,7 +10,9 @@ $dbname = "kinderCare_sys";
 
 $conn = mysqli_connect($hostname, $username, $password, $dbname);
 $query = "SELECT Usercode, firstname, lastname,phonenumber,activeInactive FROM pupil";
+$r_query = "SELECT Usercode, request FROM request";
 $result = mysqli_query($conn, $query);
+$rq_query = mysqli_query($conn, $r_query);
 
 ?>
 
@@ -91,7 +93,8 @@ $result = mysqli_query($conn, $query);
         <th>Request</th>
         <th>Remove </th>
         </tr>
-        <?php while($row=mysqli_fetch_array($rq_query)):; ?>
+        <?php 
+            while($row=mysqli_fetch_array($rq_query)):; ?>
                 <tr>
                 <td><?php echo $row['Usercode']," ",$row['request'];?></td>
                 <td><?php
