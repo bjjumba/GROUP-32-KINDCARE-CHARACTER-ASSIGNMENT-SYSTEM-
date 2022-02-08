@@ -3,13 +3,42 @@
 if(isset($_POST['assign-submit'])) {
     //assign variables
     $one = $_POST['one'];
-    $two = $_POST['two'];
-    $three = $_POST['three'];
-    $four = $_POST['four'];
-    $five = $_POST['five'];
-    $six = $_POST['six'];
-    $seven = $_POST['seven'];
-    $eight = $_POST['eight'];
+     //isset function to remove undefined Index Errors
+     if(isset($_POST['two'])) {
+        $two = $_POST['two'];
+    } else {
+        $two = NULL;
+    }
+    if(isset($_POST['three'])) {
+        $three = $_POST['three'];
+    } else {
+        $three = NULL;
+    }
+    if(isset($_POST['four'])) {
+        $four = $_POST['four'];
+    } else {
+        $four = NULL;
+    }
+    if(isset($_POST['five'])) {
+        $five = $_POST['five'];
+    } else {
+        $five = NULL;
+    }
+    if(isset($_POST['six'])) {
+        $six = $_POST['six'];
+    } else {
+        $six = NULL;
+    }
+    if(isset($_POST['seven'])) {
+        $seven = $_POST['seven'];
+    } else {
+        $seven = NULL;
+    }
+    if(isset($_POST['eight'])) {
+        $eight = $_POST['eight'];
+    } else {
+        $eight = NULL;
+    }
     $startDate = date("Y-m-d",strtotime($_POST['startdate']));  //change date to the required format
     $endDate = date("Y-m-d", strtotime($_POST['enddate']));
     $startTime = date("h:i:s",strtotime($_POST['starttime']));  //change time to the required format

@@ -16,7 +16,7 @@ require "header.php";
     <h1>Select characters to make assignment</h1><br>
     <form action="includes/assignment.inc.php" method="POST">
         <div class="inputfeild">
-        <input type="text" name="id" placeholder="Enter AssignmentID number" required>
+        <input type="text" name="id" placeholder="Enter AssignmentID number">
     </div><br><br>
     <div class="b_wrapper">
     <div class="s_wrapper">
