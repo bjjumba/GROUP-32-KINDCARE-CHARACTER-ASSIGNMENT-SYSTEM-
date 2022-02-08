@@ -17,11 +17,11 @@ session_start();
         <form action="includes/login.php" method="POST">
             Username/E-mail:<br>
             <div class="inputfeild">
-            <input type="text" name="mailuname" placeholder="Username/E-mail"><br><br>
+            <input type="text" name="mailuname" placeholder="Username/E-mail" required><br><br>
             </div>
             Passcode:<br>
             <div class="inputfeild">
-            <input type="password" name="pcd" placeholder="Passcode"><br><br>
+            <input type="password" name="pcd" placeholder="Passcode" required><br><br>
             </div>
             <button type="submit" name="login" class="button">Login</button><br><br>
             <!-- Don't have an account!<a href="signup.php">Signup</a> -->

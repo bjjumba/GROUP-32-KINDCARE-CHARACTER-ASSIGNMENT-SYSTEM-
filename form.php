@@ -17,19 +17,19 @@ require_once('data.php');
                <div class="form-group mb-3">
                <label for="Name"><b>Usercode</b></label>
                <div class="inputfeild">
-             <input type="text" class="form-control"name="Usercode"required>
-              </div>
+               <input type="text" class="form-control"name="Usercode"required>
+               </div>
                </div>
                <div class="form-group mb-3">
                <label for="Name"><b>Assignment-ID</b></label>
                <div class="inputfeild">
-             <input type="text" class="form-control"name="assignmentID"required>
-              </div>
+               <input type="text" class="form-control"name="assignmentID"required>
+               </div>
                </div>
                <div class="form-group mb-3">
                <label for="Name"><b>Comment</b></label>
                <div class="inputfeild">
-             <input type="text" class="form-control"name="comment"required>
+               <input type="text" class="form-control"name="comment"required>
                 </div>
                </div>
                <div class="s_bttn">

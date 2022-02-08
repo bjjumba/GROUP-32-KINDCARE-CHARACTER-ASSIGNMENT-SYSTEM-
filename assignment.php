@@ -16,14 +16,14 @@ require "header.php";
     <h1>Select characters to make assignment</h1><br>
     <form action="includes/assignment.inc.php" method="POST">
         <div class="inputfeild">
-        <input type="text" name="id" placeholder="Enter AssignmentID number">
+        <input type="text" name="id" placeholder="Enter AssignmentID number" required>
     </div><br><br>
     <div class="b_wrapper">
     <div class="s_wrapper">
         <div class="chars">
         <div class= "schars">
         <label for="">CHARACTER 1:</label>
-        <select name="one">
+        <select name="one" required>
             <option disabled hidden selected>Select</option>
             <option>A</option>
             <option>B</option>
@@ -279,33 +279,58 @@ require "header.php";
         <div class="wr">
         <label for="">Start Date </label>
         <div class="s_inputfeild">
-        <input type="date" name="startdate">
+        <input type="date" name="startdate" required>
         </div>
         <label for="">End Date</label>
         <div class="s_inputfeild">
-        <input type="date" name="enddate">
+        <input type="date" name="enddate" required>
         </div>
         </div>
         <br><br>
         <div class="wr">
         <label for="">Start Time</label>
         <div class="s_inputfeild">
-        <input type="time" name="starttime" >
+        <input type="time" name="starttime" required>
         </div>
         <label for="">End Time</label>
         <div class="s_inputfeild">
-        <input type="time" name="endtime"><br>
+        <input type="time" name="endtime" required><br>
         </div>
         </div>
         </div>
         </div>
         </div>
-        <input type="text" hidden value=".$_SESSION['userUid']." name="username">
+        <?php
+        // if(isset($_SESSION['userUid'])) {
+        echo '<input type="text" name="username" hidden value='.$_SESSION['userUid'].'>' ;
+            
+        // }
+        ?>
         <div class="s_bttn">
         <input type="submit" name="assign-submit" value="UPLOAD">  
         </div>
     </form>
     </div>
+    <?php
+//  $one = $_POST['one'];
+//  $two = $_POST['two'];
+//  $three = $_POST['three'];
+//  $four = $_POST['four'];
+//  $five = $_POST['five'];
+//  $six = $_POST['six'];
+//  $seven = $_POST['seven'];
+//  $eight = $_POST['eight'];
+//  $startDate = date("Y-m-d",$_POST['startdate']);
+//  $endDate = date("Y-m-d",$_POST['enddate']);
+//  $startTime = $_POST['starttime'];
+//  $endTime = $_POST['endtime'];
+//  $assignmentNo = $_POST['id'];
+//  $username = $_POST['username'];
+
+// $sql="INSERT INTO assignment(assignmentID,character1,character2,character3,character4,character5,character6,character7,character8,startDate,endDate,startTime,endTime,teacherUsername) 
+// VALUES($assignmentNo,$one,$two,$three,$four,$five,$six,$seven,$eight,$startDate,$endDate,$startTime,$endTime,$username)";
+// mysqli_query($conn,$sql);
+?>
 </br>
 </br>
 </br>

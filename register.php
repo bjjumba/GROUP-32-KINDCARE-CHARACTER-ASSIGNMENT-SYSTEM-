@@ -23,19 +23,19 @@ $rq_query = mysqli_query($conn, $r_query);
             <form action="includes/register.inc.php" method="POST">
                 FirstName:<br>
                 <div class="inputfeild">
-                <input type="text" name="fName"><br>
+                <input type="text" name="fName" required><br>
                 </div>
                 LastName:<br>
                 <div class="inputfeild">
-                <input type="text" name="lName"><br>
+                <input type="text" name="lName" required><br>
                 </div>
                 Phone Number:<br>
                 <div class="inputfeild">
-                <input type="text" name="phone"><br>
+                <input type="text" name="phone" required><br>
                 </div>
                 Assign usercode:<br>
                 <div class="inputfeild">
-                <input type="password" name="code"><br><br>
+                <input type="password" name="code" required><br><br>
                 </div>
                 <?php
                 echo'<input name="username" hidden value='.$_SESSION['userUid'].'>';
