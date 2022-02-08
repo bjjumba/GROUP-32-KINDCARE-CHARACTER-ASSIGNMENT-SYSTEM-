@@ -87,7 +87,7 @@ $rq_query = mysqli_query($conn, $r_query);
     <div>
         <h4>Activation Requests</h4>
         
-        <form action="includes/deleteRequest.inc.php" method="POST">
+        
         <table>
         <tr>
         <th>Request</th>
@@ -97,15 +97,24 @@ $rq_query = mysqli_query($conn, $r_query);
             while($row=mysqli_fetch_array($rq_query)):; ?>
                 <tr>
                 <td><?php echo $row['Usercode']," ",$row['request'];?></td>
-                <td><?php
+                <td>
+                <form action="includes/deleteRequest.inc.php" method="POST">
+                <?php
                 echo'<input type="hidden" name="usercode" value="'.$row['Usercode'].'">';
-                echo'<button name="delete-request">Delete</button>';
-                ?></td>
+                echo'<button name="delete-request" class="d_activate">Delete</button>';
+                ?>
+                </form>
+                </td>
                 </tr>
                 <?php endwhile; ?>
         </table>
-        </form>
+        
     </div>
+                    </br>
+                    </br>
+                    </br>
+                    </br>
+                    
     <script>
     
         // window.addEventListener("click",change,false)
