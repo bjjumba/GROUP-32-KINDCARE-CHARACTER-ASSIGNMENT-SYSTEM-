@@ -9,6 +9,9 @@ session_start();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kindercare</title>
     <link rel="stylesheet" href="kinder.css">
+    <script
+    src="chart.js">
+    </script>
 </head>
 <header>
     <a href="welDash.php"><img class="logo" src="img/logo.png" alt="logo"></a>
@@ -23,7 +26,7 @@ session_start();
             <a href="assignment.php">Assignments</a>
         </h4>
         <h4>
-            <a href="form.php">Reports & Results</a>
+            <a href="report.php">Reports & Results</a>
         </h4>
        <!-- <div class="animation start-register"></div> -->
     </nav>

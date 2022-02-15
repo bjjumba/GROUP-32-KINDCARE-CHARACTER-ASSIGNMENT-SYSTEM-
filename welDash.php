@@ -43,21 +43,20 @@ require 'header.php';
         echo'</div>';
         echo'<div class="summary">';
         if($assign=mysqli_query($conn,$open)) {
-            $done=mysqli_query($conn,$closed);
-            $rowcount= mysqli_num_rows($assign)-mysqli_num_rows($done);
-            printf("<h3>OPEN ASSIGNMENTS</h3></br>");
+            $rowcount= mysqli_num_rows($assign);
+            printf("<h3>UPLOADED ASSIGNMENTS</h3></br>");
             printf(" <div class=No>%d</div>", $rowcount);
             mysqli_free_result($assign);
         }
         echo'</div>';
-        echo'<div class="summary">';
-        if($done=mysqli_query($conn,$closed)) {
-            $rowcount = mysqli_num_rows($done);
-            printf("<h3>CLOSED ASSIGNMENTS</h3></br>");
-            printf(" <div class=No>%d</div>", $rowcount);
-            mysqli_free_result($done);
-        }
-        echo'</div>';
+        // echo'<div class="summary">';
+        // if($done=mysqli_query($conn,$closed)) {
+        //     $rowcount = mysqli_num_rows($done);
+        //     printf("<h3>CLOSED ASSIGNMENTS</h3></br>");
+        //     printf(" <div class=No>%d</div>", $rowcount);
+        //     mysqli_free_result($done);
+        // }
+        // echo'</div>';
         echo'<div class="summary">';
         if($act=mysqli_query($conn,$request)) {
             $rowcount = mysqli_num_rows($act);

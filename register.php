@@ -18,7 +18,7 @@ $rq_query = mysqli_query($conn, $r_query);
 
 <main>    
         <div id="reg">
-        <div class="container">
+        <div class="container2">
             <h3>Registration</h3>
             <form action="includes/register.inc.php" method="POST">
                 FirstName:<br>

@@ -1,0 +1,59 @@
+<div class="chart-container" style="position: relative; height:40vh; width:50vw">
+    <canvas id="myChart" width="100" height="100"></canvas>
+
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.0/chart.min.js"
+    integrity="sha512-TW5s0IT/IppJtu76UbysrBH9Hy/5X41OTAbQuffZFU6lQ1rdcLHzpU5BzVvr/YFykoiMYZVWlr/PX1mDcfM9Qg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<script>
+
+    bcolors = [];
+    chartData = [];
+    labels = [];
+    $(document).ready(function () {
+        $.ajax({
+            url: 'fetchdata.php',
+            method: "POST",
+            data: {
+                action: "fetch"
+            },
+            dataType: "json",
+            success: function (data) {
+
+
+                for (let index = 0; index < data.length; index++) {
+                    chartData.push(data[index].average)
+                    labels.push(data[index].Usercode)
+                    bcolors.push('red')
+
+                }
+
+
+                const ctx = document.getElementById('myChart').getContext('2d');
+                const myChart = new Chart(ctx, {
+                    type: 'bar',
+                    data: {
+                        labels: labels,
+                        datasets: [{
+                            label: 'students',
+                            data: chartData,
+                            backgroundColor: bcolors,
+                            borderColor: bcolors,
+                            borderWidth: 1
+                        }]
+                    },
+                    options: {
+                        scales: {
+                            y: {
+                                beginAtZero: true
+                            }
+                        }
+                    }
+                });
+
+            }
+        })
+    });
+</script>

@@ -19,10 +19,12 @@ session_start();
             <div class="inputfeild">
             <input type="text" name="mailuname" placeholder="Username/E-mail" required><br><br>
             </div>
+            </br>
             Passcode:<br>
             <div class="inputfeild">
             <input type="password" name="pcd" placeholder="Passcode" required><br><br>
             </div>
+            </br>
             <button type="submit" name="login" class="button">Login</button><br><br>
             <!-- Don't have an account!<a href="signup.php">Signup</a> -->
         </form>
